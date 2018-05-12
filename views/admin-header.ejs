@@ -12,9 +12,11 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
 	 crossorigin="anonymous">
-	 <script src="//rawgit.com/honeymaro/MaroJS-list-renderer/master/src/list-renderer.js"></script>
+	<script src="//rawgit.com/honeymaro/MaroJS-list-renderer/master/src/list-renderer.js"></script>
 
-
+	<script>
+		var company_id = 1;
+	</script>
 </head>
 
 <body>
@@ -22,7 +24,7 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="header-logo">Crowd</div>
-			<div class="header-button">
+			<div class="header-button" onclick="location.href='/admin/dashboard'">
 				<i class="fas fa-home"></i>
 				요약
 			</div>
@@ -32,13 +34,13 @@
 					<i class="fas fa-search"></i>
 				</button>
 			</div>
-			<div class="header-button selected">
+			<div class="header-button" onclick="location.href='/admin/survey'">
 				<i class="fas fa-server"></i>
 				설문조사 관리
 			</div>
-			<div class="header-button">
+			<div class="header-button" onclick="location.href='/admin/point'">
 				<i class="fas fa-coins"></i>
-				포인트 적립
+				메세지 발송
 			</div>
 		</header>
 		<div class="content">

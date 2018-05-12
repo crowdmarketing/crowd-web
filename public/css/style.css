@@ -222,11 +222,144 @@
         color: #555;
         cursor: pointer;
         user-select: none;
+        -webkit-transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
+        -moz-transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
+        -o-transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
+        transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
     }
-    .content .survey-add:hover{
-        border: 2px solid #ee008c;
+    .content .survey-add:hover {
+        /* border: 2px solid #ee008c;
         color: #ee008c;
-        background-color: #fcfcfc;
+        background-color: #fcfcfc; */
+        box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11), 0 5px 15px 0 rgba(0, 0, 0, 0.08);
+        transform: scale(1.01);
+    }
+    .content .point {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .content .point .point-input {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        position: relative;
+        display: block;
+        margin-bottom: 10px;
+    }
+    .content .point .point-input .point-number {
+        width: 100%;
+        height: auto;
+        padding: 10px 40px 10px 10px;
+        border: none;
+        background: none;
+        border-bottom: 2px solid #ccc;
+        font-size: 1.2em;
+    }
+    .content .point .point-input .point-number:focus {
+        border-bottom-color: #ee008c;
+    }
+    .content .point .point-input .point-submit {
+        width: 48px;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    .content .point .point-input .point-submit:hover {
+        background-color: #ccc;
+    }
+    .user-survey {
+        width: 100%;
+        height: auto;
+        position: relative;
+        max-width: 640px;
+        margin: 0 auto;
+    }
+    .user-survey .user-survey-logo {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        font-size: 1.4em;
+        font-weight: 100;
+    }
+    .user-survey .user-survey-list {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 10px;
+        padding-top: 0px;
+    }
+    .user-survey .user-survey-list .user-survey-list-item {
+        width: 100%;
+        height: auto;
+        /* padding: 10px; */
+        margin-bottom: 10px;
+        padding: 70px 0;
+        position: relative;
+    }
+    .user-survey .user-survey-list .user-survey-list-item .user-survey-list-item-title {
+        width: 100%;
+        height: auto;
+        position: relative;
+        font-size: 1.2em;
+        font-weight: 100;
+        margin-bottom: 20px;
+    }
+    .user-survey .user-survey-list .user-survey-list-item .user-survey-list-item-mc {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .user-survey .user-survey-list .user-survey-list-item .user-survey-list-item-mc .user-survey-list-item-mc-button {
+        width: auto;
+        height: auto;
+        display: inline-block;
+        padding: 10px 20px;
+        border: none;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        margin-right: 4px;
+        margin-bottom: 4px;
+        cursor: pointer;
+    }
+    .user-survey .user-survey-list .user-survey-list-item[type=mc] .user-survey-list-item-text,
+    .user-survey .user-survey-list .user-survey-list-item[type=text] .user-survey-list-item-mc {
+        display: none;
+    }
+    .user-survey .user-survey-list .user-survey-list-item .user-survey-list-item-mc .user-survey-list-item-mc-button.selected {
+        border-bottom-color: #ee008c;
+    }
+    .user-survey .user-survey-list .user-survey-list-item .user-survey-list-item-text {
+        width: 80%;
+        height: auto;
+        position: relative;
+    }
+    .user-survey .user-survey-list .user-survey-list-item .user-survey-list-item-text input {
+        width: 100%;
+        height: auto;
+        padding: 10px 10px;
+        position: relative;
+        border: none;
+        background: none;
+        border-bottom: 2px solid #ddd;
+    }
+    .user-survey .user-survey-list .user-survey-list-item .user-survey-list-item-text input:focus {
+        border-bottom-color: #ee008c;
+    }
+    .user-survey .user-survey-submit{
+        width: 100%;
+        height: auto;
+        position: relative;
+        text-align: right;
+        font-weight: 700;
+        color: #ee008c;
+        border-top: 1px solid #eee;
+        padding: 20px;
+        cursor: pointer;
     }
     select {
         width: auto;
@@ -271,5 +404,39 @@
     input[type=checkbox]:checked+label::after {
         left: 24px;
         background-color: #fff;
+    }
+    .clickEffect {
+        width: 30px;
+        height: 30px;
+        position: fixed;
+        /* z-index: 300; */
+        /* left: 50%;
+        top: 50%; */
+        transform: translate(-50%, -50%);
+        background-color: #ee008c;
+        opacity: .5;
+        border-radius: 50%;
+        -webkit-animation: clickEffect .2s linear forwards;
+        animation: clickEffect .2s linear forwards;
+    }
+    @-webkit-keyframes clickEffect {
+        0% {
+            -webkit-transform: translate(-50%, -50%) scale(1);
+            opacity: .5;
+        }
+        100% {
+            -webkit-transform: translate(-50%, -50%) scale(10);
+            opacity: 0;
+        }
+    }
+    @keyframes clickEffect {
+        0% {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: .5;
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(10);
+            opacity: 0;
+        }
     }
 }

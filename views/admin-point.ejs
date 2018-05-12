@@ -1,5 +1,25 @@
 <%- include('admin-header') %>
 
-
-
-<%- include('admin-footer') %>
+	<div class="point">
+		<h1>메세지 발송 및 포인트 적립</h1>
+		<form id="frmPoint">
+			<div class="point-input">
+				<input class="point-number" type="text" placeholder="010-0000-0000">
+				<button class="point-submit" type="submit">
+					<i class="fas fa-angle-right fa-2x"></i>
+				</button>
+			</div>
+		</form>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<h1>마케터 추천 포인트 설정</h1>
+		<div>
+			<input type="number" style="width: 50px; border: none; border-bottom: 1px solid #ccc;" value="500"> 포인트를 마케터에게 적립합니다.
+		</div>
+	</div>
+	<script src="/js/admin-point.js"></script>
+	<%- include('admin-footer') %>

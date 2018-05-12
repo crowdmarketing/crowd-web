@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="/css/style.css">
+	<title>crowd</title>
+	<script>
+	</script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	 crossorigin="anonymous">
+	<script src="//rawgit.com/honeymaro/MaroJS-list-renderer/master/src/list-renderer.js"></script>
+
+	<script>
+		var company_id = 1;
+	</script>
+</head>
+
+<body>
+	<div class="user-survey">
+		<div class="user-survey-logo">
+			CM ✕ 개포골식당
+		</div>
+		<span style="padding: 10px; font-weight: 700; font-size: 1.2em; display: block;">만족도 조사</span>
+		<span style="padding: 10px; display: block;">설문조사를 하고 우리 매장의 마케터가 되어 리워드를 획득하세요! </span>
+		<div style="width: 100%; height: 200px; background-image: url(/img/back.png); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%;"></div>
+		<div class="user-survey-list">
+			<div class="user-survey-list-item" type="${type}">
+				<div class="user-survey-list-item-title">
+					${title}
+				</div>
+				<div class="user-survey-list-item-mc">
+					<div class="user-survey-list-item-mc-button">${choice1}</div>
+					<div class="user-survey-list-item-mc-button">${choice2}</div>
+					<div class="user-survey-list-item-mc-button">${choice3}</div>
+					<div class="user-survey-list-item-mc-button">${choice4}</div>
+					<div class="user-survey-list-item-mc-button">${choice5}</div>
+				</div>
+				<div class="user-survey-list-item-text">
+					<input type="text" placeholder="여기에 응답을 입력해주세요.">
+				</div>
+			</div>
+		</div>
+		<div class="user-survey-submit">
+			제출하고 리워드 받기
+			<i class="fas fa-angle-right"></i>
+		</div>
+	</div>
+	<script src="/js/user-survey.js"></script>
+</body>
+
+</html>

@@ -3,17 +3,17 @@
 	<h1>설문조사 관리</h1>
 
 	<div class="survey-list">
-		<div class="survey-list-item" type="${type}">
-			<div class="survey-list-item-remove">
+		<div class="survey-list-item" type="${type}" index="${i}">
+			<div class="survey-list-item-remove" index="${i}">
 				<i class="fas fa-times"></i>
 			</div>
 			<div class="survey-list-item-inside">
 				<input class="survey-list-item-title" placeholder="질문을 입력해주세요." value="${title}">
-				<input class="survey-list-item-answer" placeholder="선택지를 입력해주세요." value="매우 좋음">
-				<input class="survey-list-item-answer" placeholder="선택지를 입력해주세요." value="좋음">
-				<input class="survey-list-item-answer" placeholder="선택지를 입력해주세요." value="보통">
-				<input class="survey-list-item-answer" placeholder="선택지를 입력해주세요." value="나쁨">
-				<input class="survey-list-item-answer" placeholder="선택지를 입력해주세요." value="매우 나쁨">
+				<input class="survey-list-item-answer" placeholder="선택지를 입력해주세요." value="${choice1}">
+				<input class="survey-list-item-answer" placeholder="선택지를 입력해주세요." value="${choice2}">
+				<input class="survey-list-item-answer" placeholder="선택지를 입력해주세요." value="${choice3}">
+				<input class="survey-list-item-answer" placeholder="선택지를 입력해주세요." value="${choice4}">
+				<input class="survey-list-item-answer" placeholder="선택지를 입력해주세요." value="${choice5}">
 				<br>이 설문의 리워드:
 				<input class="survey-list-item-point" type="number" value="${point}" style="width: 50px; border: none; border-bottom: 1px solid #ddd;">포인트
 			</div>
