@@ -1,0 +1,34 @@
+<%- include('admin-header') %>
+
+	<h1>설문조사 관리</h1>
+
+	<div class="survey-list">
+		<div class="survey-list-item" type="${type}">
+			<div class="survey-list-item-remove">
+				<i class="fas fa-times"></i>
+			</div>
+			<div class="survey-list-item-inside">
+				<input class="survey-list-item-title" placeholder="질문을 입력해주세요." value="${title}">
+				<input class="survey-list-item-answer" placeholder="선택지를 입력해주세요." value="매우 좋음">
+				<input class="survey-list-item-answer" placeholder="선택지를 입력해주세요." value="좋음">
+				<input class="survey-list-item-answer" placeholder="선택지를 입력해주세요." value="보통">
+				<input class="survey-list-item-answer" placeholder="선택지를 입력해주세요." value="나쁨">
+				<input class="survey-list-item-answer" placeholder="선택지를 입력해주세요." value="매우 나쁨">
+				<br>이 설문의 리워드:
+				<input class="survey-list-item-point" type="number" value="${point}" style="width: 50px; border: none; border-bottom: 1px solid #ddd;">포인트
+			</div>
+			<div class="survey-list-item-right">
+				<span style="vertical-align: middle;">객관식</span>
+				<input class="survey-list-item-type" type="checkbox" id="chk${i}">
+				<label for="chk${i}"></label>
+			</div>
+		</div>
+	</div>
+	<div class="survey-add">
+		<i class="fas fa-plus"></i>
+	</div>
+
+
+
+	<script src="/js/admin-survey.js"></script>
+	<%- include('admin-footer') %>
