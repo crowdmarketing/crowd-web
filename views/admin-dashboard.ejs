@@ -2,4 +2,37 @@
 
 
 
-<%- include('admin-footer') %>
+	<h1>요약 및 통계</h1>
+
+	<div style="width: 49%; max-width: 500px; display: inline-block; margin-bottom: 30px;">
+		<h2>방문 연령대</h2>
+		<canvas id="chart-area1"></canvas>
+	</div>
+
+
+	<div style="width: 49%; max-width: 500px; display: inline-block; margin-bottom: 30px;">
+		<h2>1인당 소비(원)</h2>
+		<canvas id="chart-area2"></canvas>
+	</div>
+
+
+	<div style="width: 49%; max-width: 500px; display: inline-block; margin-bottom: 30px;">
+		<h2>머무르는 시간</h2>
+		<canvas id="chart-area3"></canvas>
+	</div>
+
+
+	<div style="width: 49%; max-width: 500px; display: inline-block; margin-bottom: 30px;">
+		<h2>설문 만족도</h2>
+		<canvas id="chart-area4"></canvas>
+	</div>
+
+	<div style="width: 49%; max-width: 500px; display: inline-block; margin-bottom: 30px;">
+		<h2>샘플</h2>
+		<canvas id="chart-area5"></canvas>
+	</div>
+
+
+
+	<script src="/js/admin-dashboard.js"></script>
+	<%- include('admin-footer') %>
