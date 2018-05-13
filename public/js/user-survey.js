@@ -126,7 +126,7 @@ $(document).ready(function () {
 			url: '/api/companys/' + company_id + '/users/' + phone_number + '/surveys/' + survey_id,
 			processData: false,
 			contentType: false,
-			dataType: "json",
+			dataType: "html",
 			cache: false,
 			type: 'POST',
 			data: JSON.stringify(surveyData)
