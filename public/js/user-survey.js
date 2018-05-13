@@ -1,6 +1,8 @@
 $(document).ready(function () {
 
 
+	var phone_number = "";
+	var survey_id = "";
 
 	var surveyData = [];
 	var surveyRenderer = new Maro.listRenderer(".user-survey-list", $(".user-survey-list").html(), []);
@@ -47,6 +49,8 @@ $(document).ready(function () {
 		var s = JSON.parse(data.content);
 		console.log(s);
 		surveyData = s;
+		phone_number = data.phone_number;
+		survey_id = data.id;
 
 		surveyRenderer.setRenderData(fnSurveyDataToRenderData(surveyData));
 
@@ -88,6 +92,8 @@ $(document).ready(function () {
 		var scrollTo = $(".user-survey-list-item:eq(" + ($(".user-survey-list-item").index(item) + 1) + ")").offset().top;
 		body.stop().animate({ scrollTop: scrollTo }, 800, 'swing', function () {
 		});
+
+		$(item).find(".user-survey-list-item-thanks").addClass("selected");
 	});
 
 	$("body").on("keydown", ".user-survey-list-item-text input", function (e) {
@@ -103,7 +109,35 @@ $(document).ready(function () {
 		}
 	});
 
-	$("body").on("click", ".user-survey-submit", function(){
-		alert("리워드가 적립되었습니다. 애플리케이션을 설치하여 포인트를 확인하여 보세요!");
+	$("body").on("change", ".user-survey-list-item-text input", function (e) {
+		var item = $(this).parents(".user-survey-list-item");
+		$(item).find(".user-survey-list-item-thanks").addClass("selected");
+
+	});
+
+	$("body").on("click", ".user-survey-submit", function () {
+
+
+
+
+		// /companys/{companyId}/users/{phoneNumber}/surveys/{surveyId}
+
+		$.ajax({
+			url: '/api/companys/' + company_id + '/users/' + phone_number + '/surveys/' + survey_id,
+			processData: false,
+			contentType: false,
+			dataType: "json",
+			cache: false,
+			type: 'POST',
+			data: JSON.stringify(surveyData)
+		}).done(function (data) {
+			alert("리워드가 적립되었습니다. 애플리케이션을 설치하여 포인트를 확인하여 보세요!");
+		}).fail(function () {
+
+		}).always(function () {
+
+		});
+
+
 	});
 })

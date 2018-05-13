@@ -350,7 +350,17 @@
     .user-survey .user-survey-list .user-survey-list-item .user-survey-list-item-text input:focus {
         border-bottom-color: #ee008c;
     }
-    .user-survey .user-survey-submit{
+    .user-survey .user-survey-list .user-survey-list-item .user-survey-list-item-thanks {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: none;
+        color: #177200;
+    }
+    .user-survey .user-survey-list .user-survey-list-item .user-survey-list-item-thanks.selected {
+        display: block;
+    }    
+    .user-survey .user-survey-submit {
         width: 100%;
         height: auto;
         position: relative;
